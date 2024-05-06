@@ -33,6 +33,7 @@ int main() {
 }
 
 void DrawBoard() {
+	//Draw the board
 	cout << " " << placement[0] <<" | " << placement[1] << " | " << placement[2] << " \n";
 	cout << "---|---|---\n";
 	cout << " " << placement[3] << " | " << placement[4] << " | " << placement[5] << " \n";
@@ -44,6 +45,7 @@ void PlayerTurn() {
 	cout << "Your turn!\n";
 	int nr = 0;
 	bool valid = false;
+	//Check if the spot you want to pick is already taken or check if the input is valid
 	while (!valid)
 	{
 		cin >> nr;
@@ -67,6 +69,7 @@ void PlayerTurn() {
 void EnemyTurn() {
 	int nr = 0;
 	bool available = false;
+	//Check if spot is taken
 	while (!available)
 	{
 		nr = (rand() % 9);
