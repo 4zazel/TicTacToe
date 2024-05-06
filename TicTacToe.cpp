@@ -11,12 +11,11 @@ void CheckWin();
 void EnemyTurn();
 
 char placement[9] = { ' ',' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
+bool quit = false;
 
 int main() {
 
 	srand(time(NULL));
-
-	bool quit = false;
 
 	cout << "Welcome! To start, type the cell number (1 through 9)\n";
 
@@ -27,6 +26,7 @@ int main() {
 		PlayerTurn();
 		DrawBoard();
 		EnemyTurn();
+		CheckWin();
 	}
 
 	return 0;
@@ -81,5 +81,102 @@ void EnemyTurn() {
 }
 
 void CheckWin() {
+	//Fix
+	if (placement[0] == 'X' && placement[1] == 'X' && placement[2] == 'X')
+	{
+		system("CLS");
+		cout << "Player wins!\n";
+		quit = true;
+	}
+	else if (placement[3] == 'X' && placement[4] == 'X' && placement[5] == 'X')
+	{
+		system("CLS");
+		cout << "Player wins!\n";
+		quit = true;
+	}
+	else if (placement[6] == 'X' && placement[7] == 'X' && placement[8] == 'X')
+	{
+		system("CLS");
+		cout << "Player wins!\n";
+		quit = true;
+	}
+	else if (placement[0] == 'X' && placement[4] == 'X' && placement[8] == 'X')
+	{
+		system("CLS");
+		cout << "Player wins!\n";
+		quit = true;
+	}
+	else if (placement[2] == 'X' && placement[4] == 'X' && placement[6] == 'X')
+	{
+		system("CLS");
+		cout << "Player wins!\n";
+		quit = true;
+	}
+	else if (placement[2] == 'X' && placement[5] == 'X' && placement[8] == 'X')
+	{
+		system("CLS");
+		cout << "Player wins!\n";
+		quit = true;
+	}
+	else if (placement[1] == 'X' && placement[4] == 'X' && placement[7] == 'X')
+	{
+		system("CLS");
+		cout << "Player wins!\n";
+		quit = true;
+	}
+	else if (placement[0] == 'X' && placement[3] == 'X' && placement[6] == 'X')
+	{
+		system("CLS");
+		cout << "Player wins!\n";
+		quit = true;
+	}
 
+	if (placement[0] == '0' && placement[1] == '0' && placement[2] == '0')
+	{
+		system("CLS");
+		cout << "Computer wins!\n";
+		quit = true;
+	}
+	else if (placement[3] == '0' && placement[4] == '0' && placement[5] == '0')
+	{
+		system("CLS");
+		cout << "Computer wins!\n";
+		quit = true;
+	}
+	else if (placement[6] == '0' && placement[7] == '0' && placement[8] == '0')
+	{
+		system("CLS");
+		cout << "Computer wins!\n";
+		quit = true;
+	}
+	else if (placement[0] == '0' && placement[4] == '0' && placement[8] == '0')
+	{
+		system("CLS");
+		cout << "Computer wins!\n";
+		quit = true;
+	}
+	else if (placement[2] == '0' && placement[4] == '0' && placement[6] == '0')
+	{
+		system("CLS");
+		cout << "Computer wins!\n";
+		quit = true;
+	}
+	else if (placement[2] == '0' && placement[5] == '0' && placement[8] == '0')
+	{
+		system("CLS");
+		cout << "Computer wins!\n";
+		quit = true;
+	}
+	else if (placement[1] == '0' && placement[4] == '0' && placement[7] == '0')
+	{
+		system("CLS");
+		cout << "Computer wins!\n";
+		quit = true;
+	}
+	else if (placement[0] == '0' && placement[3] == '0' && placement[6] == '0')
+	{
+		system("CLS");
+		cout << "Computer wins!\n";
+		quit = true;
+	}
 }
